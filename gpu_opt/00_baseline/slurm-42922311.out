@@ -1,0 +1,34 @@
+name, memory.total [MiB]
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+cuequivariance / cuequivariance_torch not available. Cuequivariance acceleration will be disabled.
+[env] pid=1507422 python=/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/bin/python trainer=/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/mp_trainer.py
+Start time: 11/06/2026 14:46:33
+
+device:
+[33m -- cuda
+ -- number of gpu  1[0m
+
+equiv. lib.:
+[33m -- OpenEquivariance[0m
+
+interaction block:
+[33m -- fast[0m
+
+[32mrestarting training from the /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/00_baseline/model_ft.pkl[0m
+ -- restarting from the step where the loss was {'epoch': 118, 'train': tensor(0.0125, device='cuda:0'), 'valid': tensor(0.0003, device='cuda:0')}
+
+number of parameters:
+[33m -- model (race)  6468994[0m
+
+11/06/2026 14:47:45
+                               | TRAIN_______________________________________________________________________________________________| VALID_________________________________________________________________________| 
+MM/DD/YYYY HH/MM/SS    EPOCH   | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   LOSS_DN_H  HUBER_E    HUBER_F    HUBER_S    LOSS_DN     | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   HUBER_E    HUBER_F    HUBER_S     | LR   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/lib/python3.11/site-packages/torch/nn/modules/linear.py:134: UserWarning: Requested unified CUBLASLT workspace size of 1048576 bytes exceeds CUBLAS workspace size of 131072 bytes. Please increase CUBLAS workspace size via CUBLAS_WORKSPACE_CONFIG or decrease requested CUBLASLT_WORKSPACE_SIZE. Otherwise CUBLASLT workspace size will be limited to the CUBLAS workspace size. (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:228.)
+  return F.linear(input, self.weight, self.bias)
+11/06/2026 15:09:08    119     | 0.014887   0.00029879 0.00098134 1.514e-05  nan        0.014887   0.027057   0.002668   nan         | 0.00011154 0.00011154 0.00078984 3.004e-06  0.0094799  0.024145   0.0012578   | 0.0001
+11/06/2026 15:29:53    120     | 0.011447   0.00015837 0.0010897  nan        7.0137e-05 0.011447   0.030459   nan        0.0079578   | 9.0724e-05 9.0724e-05 0.0010921  9.8975e-06 0.0092899  0.029578   0.0025629   | 0.0001
+slurmstepd: error: *** JOB 42922311 ON olaf-g005 CANCELLED AT 2026-11-06T15:46:19 DUE TO TIME LIMIT ***

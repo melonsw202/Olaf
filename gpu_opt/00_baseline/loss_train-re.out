@@ -1,0 +1,64 @@
+[xyz cache] preprocessed 1427 graphs from /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/val.traj (dropped 0 empty)
+                               | TRAIN_______________________________________________________________________________________________| VALID_________________________________________________________________________| 
+MM/DD/YYYY HH/MM/SS    EPOCH   | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   LOSS_DN_H  HUBER_E    HUBER_F    HUBER_S    LOSS_DN     | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   HUBER_E    HUBER_F    HUBER_S     | LR   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[xyz cache] preprocessed 13654 graphs from /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj (dropped 0 empty)
+[per-xyz] epoch=1 xyz=1/1  7.17% train: loss=0.076189 loss_e_h=0.002879 loss_f_h=0.001873 loss_s_h=0.000116 loss_dn_h=nan loss_e=0.076189 loss_f=0.038806 loss_s=0.009845 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 14.35% train: loss=0.044089 loss_e_h=0.001525 loss_f_h=0.001604 loss_s_h=0.000088 loss_dn_h=nan loss_e=0.044089 loss_f=0.035837 loss_s=0.008330 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 21.52% train: loss=0.033417 loss_e_h=0.001078 loss_f_h=0.001446 loss_s_h=0.000070 loss_dn_h=nan loss_e=0.033417 loss_f=0.033864 loss_s=0.007373 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 28.70% train: loss=0.028263 loss_e_h=0.000854 loss_f_h=0.001380 loss_s_h=0.000058 loss_dn_h=nan loss_e=0.028263 loss_f=0.032800 loss_s=0.006624 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 35.88% train: loss=0.025114 loss_e_h=0.000720 loss_f_h=0.001323 loss_s_h=0.000049 loss_dn_h=nan loss_e=0.025114 loss_f=0.032116 loss_s=0.005971 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 43.06% train: loss=0.022530 loss_e_h=0.000619 loss_f_h=0.001258 loss_s_h=0.000042 loss_dn_h=nan loss_e=0.022530 loss_f=0.031300 loss_s=0.005425 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 50.24% train: loss=0.020960 loss_e_h=0.000552 loss_f_h=0.001222 loss_s_h=0.000037 loss_dn_h=nan loss_e=0.020960 loss_f=0.030744 loss_s=0.004982 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 57.42% train: loss=0.019698 loss_e_h=0.000501 loss_f_h=0.001189 loss_s_h=0.000033 loss_dn_h=nan loss_e=0.019698 loss_f=0.030230 loss_s=0.004615 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 64.60% train: loss=0.018939 loss_e_h=0.000466 loss_f_h=0.001155 loss_s_h=0.000030 loss_dn_h=nan loss_e=0.018939 loss_f=0.029751 loss_s=0.004309 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 71.78% train: loss=0.018270 loss_e_h=0.000436 loss_f_h=0.001147 loss_s_h=0.000028 loss_dn_h=nan loss_e=0.018270 loss_f=0.029467 loss_s=0.004058 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 78.96% train: loss=0.017634 loss_e_h=0.000411 loss_f_h=0.001117 loss_s_h=0.000025 loss_dn_h=nan loss_e=0.017634 loss_f=0.029122 loss_s=0.003812 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 86.14% train: loss=0.017090 loss_e_h=0.000389 loss_f_h=0.001091 loss_s_h=0.000023 loss_dn_h=nan loss_e=0.017090 loss_f=0.028780 loss_s=0.003617 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 93.32% train: loss=0.016659 loss_e_h=0.000372 loss_f_h=0.001078 loss_s_h=0.000022 loss_dn_h=nan loss_e=0.016659 loss_f=0.028534 loss_s=0.003445 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.016282 loss_e_h=0.000357 loss_f_h=0.001052 loss_s_h=0.000021 loss_dn_h=nan loss_e=0.016282 loss_f=0.028193 loss_s=0.003290 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.015932 loss_e_h=0.000343 loss_f_h=0.001045 loss_s_h=0.000019 loss_dn_h=nan loss_e=0.015932 loss_f=0.028041 loss_s=0.003155 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.015655 loss_e_h=0.000332 loss_f_h=0.001032 loss_s_h=0.000018 loss_dn_h=nan loss_e=0.015655 loss_f=0.027838 loss_s=0.003037 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.015404 loss_e_h=0.000321 loss_f_h=0.001018 loss_s_h=0.000017 loss_dn_h=nan loss_e=0.015404 loss_f=0.027621 loss_s=0.002925 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.015171 loss_e_h=0.000312 loss_f_h=0.001001 loss_s_h=0.000017 loss_dn_h=nan loss_e=0.015171 loss_f=0.027373 loss_s=0.002828 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.015031 loss_e_h=0.000305 loss_f_h=0.000986 loss_s_h=0.000016 loss_dn_h=nan loss_e=0.015031 loss_f=0.027189 loss_s=0.002749 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.014880 loss_e_h=0.000299 loss_f_h=0.000980 loss_s_h=0.000015 loss_dn_h=nan loss_e=0.014880 loss_f=0.027052 loss_s=0.002674 loss_dn=nan
+11/06/2026 15:09:08    119     | 0.014887   0.00029879 0.00098134 1.514e-05  nan        0.014887   0.027057   0.002668   nan         | 0.00011154 0.00011154 0.00078984 3.004e-06  0.0094799  0.024145   0.0012578   | 0.0001
+[dens] rattled 13654 graphs from /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj (sigma ~ uniform(0.01, 0.1), corrupt_ratio=0.4)
+[per-xyz] epoch=2 xyz=1/1  7.17% train: loss=0.011362 loss_e_h=0.000164 loss_f_h=0.001651 loss_s_h=nan loss_dn_h=0.000095 loss_e=0.011362 loss_f=0.037939 loss_s=nan loss_dn=0.009555
+[per-xyz] epoch=2 xyz=1/1 14.35% train: loss=0.011487 loss_e_h=0.000167 loss_f_h=0.001498 loss_s_h=nan loss_dn_h=0.000088 loss_e=0.011487 loss_f=0.036037 loss_s=nan loss_dn=0.009169
+[per-xyz] epoch=2 xyz=1/1 21.53% train: loss=0.010777 loss_e_h=0.000146 loss_f_h=0.001359 loss_s_h=nan loss_dn_h=0.000085 loss_e=0.010777 loss_f=0.034355 loss_s=nan loss_dn=0.008982
+[per-xyz] epoch=2 xyz=1/1 28.71% train: loss=0.010922 loss_e_h=0.000148 loss_f_h=0.001318 loss_s_h=nan loss_dn_h=0.000084 loss_e=0.010922 loss_f=0.033892 loss_s=nan loss_dn=0.008857
+[per-xyz] epoch=2 xyz=1/1 35.89% train: loss=0.010936 loss_e_h=0.000148 loss_f_h=0.001256 loss_s_h=nan loss_dn_h=0.000083 loss_e=0.010936 loss_f=0.033125 loss_s=nan loss_dn=0.008776
+[per-xyz] epoch=2 xyz=1/1 43.08% train: loss=0.011176 loss_e_h=0.000153 loss_f_h=0.001246 loss_s_h=nan loss_dn_h=0.000081 loss_e=0.011176 loss_f=0.032914 loss_s=nan loss_dn=0.008671
+[per-xyz] epoch=2 xyz=1/1 50.26% train: loss=0.011056 loss_e_h=0.000151 loss_f_h=0.001226 loss_s_h=nan loss_dn_h=0.000080 loss_e=0.011056 loss_f=0.032619 loss_s=nan loss_dn=0.008604
+[per-xyz] epoch=2 xyz=1/1 57.44% train: loss=0.011076 loss_e_h=0.000152 loss_f_h=0.001188 loss_s_h=nan loss_dn_h=0.000078 loss_e=0.011076 loss_f=0.032157 loss_s=nan loss_dn=0.008512
+[per-xyz] epoch=2 xyz=1/1 64.62% train: loss=0.011094 loss_e_h=0.000151 loss_f_h=0.001180 loss_s_h=nan loss_dn_h=0.000078 loss_e=0.011094 loss_f=0.031978 loss_s=nan loss_dn=0.008465
+[per-xyz] epoch=2 xyz=1/1 71.80% train: loss=0.011130 loss_e_h=0.000152 loss_f_h=0.001180 loss_s_h=nan loss_dn_h=0.000077 loss_e=0.011130 loss_f=0.031841 loss_s=nan loss_dn=0.008410
+[per-xyz] epoch=2 xyz=1/1 78.99% train: loss=0.011144 loss_e_h=0.000152 loss_f_h=0.001182 loss_s_h=nan loss_dn_h=0.000076 loss_e=0.011144 loss_f=0.031767 loss_s=nan loss_dn=0.008351
+[per-xyz] epoch=2 xyz=1/1 86.17% train: loss=0.011153 loss_e_h=0.000153 loss_f_h=0.001169 loss_s_h=nan loss_dn_h=0.000075 loss_e=0.011153 loss_f=0.031588 loss_s=nan loss_dn=0.008289
+[per-xyz] epoch=2 xyz=1/1 93.35% train: loss=0.011188 loss_e_h=0.000154 loss_f_h=0.001148 loss_s_h=nan loss_dn_h=0.000074 loss_e=0.011188 loss_f=0.031319 loss_s=nan loss_dn=0.008223
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.011267 loss_e_h=0.000155 loss_f_h=0.001139 loss_s_h=nan loss_dn_h=0.000073 loss_e=0.011267 loss_f=0.031200 loss_s=nan loss_dn=0.008175
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.011267 loss_e_h=0.000156 loss_f_h=0.001125 loss_s_h=nan loss_dn_h=0.000073 loss_e=0.011267 loss_f=0.031003 loss_s=nan loss_dn=0.008126
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.011245 loss_e_h=0.000155 loss_f_h=0.001115 loss_s_h=nan loss_dn_h=0.000072 loss_e=0.011245 loss_f=0.030866 loss_s=nan loss_dn=0.008084
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.011281 loss_e_h=0.000155 loss_f_h=0.001107 loss_s_h=nan loss_dn_h=0.000071 loss_e=0.011281 loss_f=0.030749 loss_s=nan loss_dn=0.008050
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.011312 loss_e_h=0.000156 loss_f_h=0.001099 loss_s_h=nan loss_dn_h=0.000071 loss_e=0.011312 loss_f=0.030637 loss_s=nan loss_dn=0.008019
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.011424 loss_e_h=0.000158 loss_f_h=0.001099 loss_s_h=nan loss_dn_h=0.000071 loss_e=0.011424 loss_f=0.030595 loss_s=nan loss_dn=0.007993
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.011446 loss_e_h=0.000158 loss_f_h=0.001090 loss_s_h=nan loss_dn_h=0.000070 loss_e=0.011446 loss_f=0.030460 loss_s=nan loss_dn=0.007959
+11/06/2026 15:29:53    120     | 0.011447   0.00015837 0.0010897  nan        7.0137e-05 0.011447   0.030459   nan        0.0079578   | 9.0724e-05 9.0724e-05 0.0010921  9.8975e-06 0.0092899  0.029578   0.0025629   | 0.0001
+[per-xyz] epoch=3 xyz=1/1  7.17% train: loss=0.011517 loss_e_h=0.000159 loss_f_h=0.000823 loss_s_h=0.000007 loss_dn_h=nan loss_e=0.011517 loss_f=0.024814 loss_s=0.002120 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 14.35% train: loss=0.012296 loss_e_h=0.000177 loss_f_h=0.000813 loss_s_h=0.000006 loss_dn_h=nan loss_e=0.012296 loss_f=0.024573 loss_s=0.001993 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 21.53% train: loss=0.011946 loss_e_h=0.000170 loss_f_h=0.000820 loss_s_h=0.000006 loss_dn_h=nan loss_e=0.011946 loss_f=0.024362 loss_s=0.001888 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 28.71% train: loss=0.011711 loss_e_h=0.000166 loss_f_h=0.000802 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.011711 loss_f=0.024015 loss_s=0.001811 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 35.89% train: loss=0.011842 loss_e_h=0.000169 loss_f_h=0.000767 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.011842 loss_f=0.023616 loss_s=0.001741 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 43.07% train: loss=0.012019 loss_e_h=0.000171 loss_f_h=0.000773 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.012019 loss_f=0.023596 loss_s=0.001702 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 50.25% train: loss=0.011927 loss_e_h=0.000170 loss_f_h=0.000751 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.011927 loss_f=0.023328 loss_s=0.001653 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 57.43% train: loss=0.012040 loss_e_h=0.000172 loss_f_h=0.000764 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.012040 loss_f=0.023367 loss_s=0.001650 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 64.61% train: loss=0.011881 loss_e_h=0.000170 loss_f_h=0.000744 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.011881 loss_f=0.023152 loss_s=0.001610 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 71.79% train: loss=0.011791 loss_e_h=0.000169 loss_f_h=0.000735 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.011791 loss_f=0.023059 loss_s=0.001575 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 78.97% train: loss=0.011728 loss_e_h=0.000167 loss_f_h=0.000722 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.011728 loss_f=0.022874 loss_s=0.001544 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 86.16% train: loss=0.011625 loss_e_h=0.000165 loss_f_h=0.000728 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.011625 loss_f=0.022895 loss_s=0.001519 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 93.34% train: loss=0.011509 loss_e_h=0.000163 loss_f_h=0.000721 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.011509 loss_f=0.022803 loss_s=0.001488 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 100.00% train: loss=0.011445 loss_e_h=0.000162 loss_f_h=0.000722 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.011445 loss_f=0.022796 loss_s=0.001472 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 100.00% train: loss=0.011332 loss_e_h=0.000160 loss_f_h=0.000715 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.011332 loss_f=0.022701 loss_s=0.001451 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 100.00% train: loss=0.011212 loss_e_h=0.000157 loss_f_h=0.000717 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.011212 loss_f=0.022716 loss_s=0.001435 loss_dn=nan
