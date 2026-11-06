@@ -1,0 +1,80 @@
+name, memory.total [MiB]
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+16:54:43 cuequivariance / cuequivariance_torch not available. Cuequivariance acceleration will be disabled.
+16:54:43 [env] pid=1521229 python=/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/bin/python trainer=/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/mp_trainer.py
+16:54:43 Start time: 11/06/2026 16:54:43
+16:54:46 
+16:54:46 device:
+16:54:46 [33m -- cuda
+16:54:46  -- number of gpu  1[0m
+16:54:46 
+16:54:46 equiv. lib.:
+16:54:46 [33m -- OpenEquivariance[0m
+16:54:46 
+16:54:46 interaction block:
+16:54:46 [33m -- fast[0m
+16:54:46 
+16:54:46 [32mrestarting training from the /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/01_baseline_re/model_ft.pkl[0m
+16:54:46  -- restarting from the step where the loss was {'epoch': 118, 'train': tensor(0.0125, device='cuda:0'), 'valid': tensor(0.0003, device='cuda:0')}
+16:54:46 
+16:54:46 number of parameters:
+16:54:46 [33m -- model (race)  6468994[0m
+16:54:46 
+16:54:54 [mem] periodic 16:54:54 max_alloc=0.43GiB max_reserved=0.46GiB
+16:55:24 [mem] periodic 16:55:24 max_alloc=6.89GiB max_reserved=14.15GiB
+16:55:48 11/06/2026 16:55:48
+16:55:48                                | TRAIN_______________________________________________________________________________________________| VALID_________________________________________________________________________| 
+16:55:48 MM/DD/YYYY HH/MM/SS    EPOCH   | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   LOSS_DN_H  HUBER_E    HUBER_F    HUBER_S    LOSS_DN     | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   HUBER_E    HUBER_F    HUBER_S     | LR   
+16:55:48 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+16:55:54 [mem] periodic 16:55:54 max_alloc=6.92GiB max_reserved=14.16GiB
+16:56:24 [mem] periodic 16:56:24 max_alloc=6.92GiB max_reserved=14.16GiB
+16:56:40 /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/lib/python3.11/site-packages/torch/nn/modules/linear.py:134: UserWarning: Requested unified CUBLASLT workspace size of 1048576 bytes exceeds CUBLAS workspace size of 131072 bytes. Please increase CUBLAS workspace size via CUBLAS_WORKSPACE_CONFIG or decrease requested CUBLASLT_WORKSPACE_SIZE. Otherwise CUBLASLT workspace size will be limited to the CUBLAS workspace size. (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:228.)
+16:56:40   return F.linear(input, self.weight, self.bias)
+16:56:54 [mem] periodic 16:56:54 max_alloc=6.92GiB max_reserved=14.16GiB
+16:57:24 [mem] periodic 16:57:24 max_alloc=6.92GiB max_reserved=14.16GiB
+16:57:54 [mem] periodic 16:57:54 max_alloc=6.92GiB max_reserved=14.16GiB
+16:58:24 [mem] periodic 16:58:24 max_alloc=6.92GiB max_reserved=14.16GiB
+16:58:54 [mem] periodic 16:58:54 max_alloc=6.92GiB max_reserved=14.16GiB
+16:59:24 [mem] periodic 16:59:24 max_alloc=6.92GiB max_reserved=14.16GiB
+16:59:54 [mem] periodic 16:59:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:00:24 [mem] periodic 17:00:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:00:54 [mem] periodic 17:00:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:01:24 [mem] periodic 17:01:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:01:54 [mem] periodic 17:01:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:02:24 [mem] periodic 17:02:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:02:54 [mem] periodic 17:02:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:03:24 [mem] periodic 17:03:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:03:54 [mem] periodic 17:03:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:04:24 [mem] periodic 17:04:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:04:54 [mem] periodic 17:04:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:05:24 [mem] periodic 17:05:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:05:54 [mem] periodic 17:05:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:06:24 [mem] periodic 17:06:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:06:54 [mem] periodic 17:06:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:07:24 [mem] periodic 17:07:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:07:54 [mem] periodic 17:07:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:08:24 [mem] periodic 17:08:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:08:54 [mem] periodic 17:08:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:09:24 [mem] periodic 17:09:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:09:54 [mem] periodic 17:09:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:10:24 [mem] periodic 17:10:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:10:54 [mem] periodic 17:10:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:11:24 [mem] periodic 17:11:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:11:54 [mem] periodic 17:11:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:12:24 [mem] periodic 17:12:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:12:54 [mem] periodic 17:12:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:13:24 [mem] periodic 17:13:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:13:54 [mem] periodic 17:13:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:14:24 [mem] periodic 17:14:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:14:54 [mem] periodic 17:14:54 max_alloc=6.92GiB max_reserved=14.16GiB
+17:15:24 [mem] periodic 17:15:24 max_alloc=6.92GiB max_reserved=14.16GiB
+17:15:54 [mem] periodic 17:15:54 max_alloc=6.97GiB max_reserved=14.16GiB
+17:16:24 [mem] periodic 17:16:24 max_alloc=7.01GiB max_reserved=14.16GiB
+17:16:40 11/06/2026 17:16:40    119     | 0.014887   0.00029879 0.00098134 1.514e-05  nan        0.014887   0.027057   0.002668   nan         | 0.00011154 0.00011154 0.00078984 3.004e-06  0.0094799  0.024145   0.0012578   | 0.0001
+17:16:41 End time: 11/06/2026 17:16:41
+17:16:41 [mem] final 17:16:41 max_alloc=7.01GiB max_reserved=14.16GiB
+17:16:54 [mem] periodic 17:16:54 max_alloc=7.01GiB max_reserved=14.16GiB
+WALL_SEC 1404

@@ -42,3 +42,29 @@
 ### 참고
 - `gpu_mem.log`: MIG 환경이라 `nvidia-smi`에 같은 GPU를 쓰는 다른 사용자의 프로세스만 보였습니다. 이 job의 메모리 값으로 쓸 수 없습니다. 다음 테스트부터는 `torch.cuda.max_memory_allocated`로 측정할 예정입니다.
 - `nepoch: 3`이면 테스트 하나가 1시간을 넘깁니다. 다음 테스트부터는 로그 각 줄에 시각을 찍고 `nepoch: 1`로 비교할 예정입니다.
+
+## 1차: 01_baseline_re vs 02_no_gradckpt (2026-11-06)
+
+공통: `nepoch: 1`, mig-3g.40gb, `-c 8`, 원본 모델(epoch 118) 복사본에서 시작.
+`tools/mem_wrap.py`로 `torch.cuda.max_memory_allocated`를 기록하고, `run.sh`에서 출력 각 줄에 시각을 붙임.
+
+| 테스트 | 변경 | job | 학습 시작 → epoch 로그 | 전체 실행 | 최대 GPU 메모리 (alloc / reserved) | loss |
+|---|---|---|---|---|---|---|
+| 01_baseline_re | 없음 | 42925762 | 16:55:48 → 17:16:40 (20.9분) | 1,404초 | 7.01 / 14.16 GiB | 00_baseline epoch 119와 완전히 같음 |
+| 02_no_gradckpt | `grad_checkpoint: false` | 42925763 | 16:55:48 → 17:16:36 (20.8분) | 1,404초 | 7.02 / 14.16 GiB | 위와 완전히 같음 |
+
+### 결론
+- **`grad_checkpoint`는 효과가 없는 옵션입니다.** `bam_torch`와 설치된 `env` 전체에서 이 키를 읽는 코드가 없습니다. `examples/bam-mp-dens/README.md`에도 "기록 보존용으로 남긴 설정이며 이 RACE 클래스에서는 gradient checkpointing을 켜지 않는다"고 적혀 있습니다. 시간, 메모리, loss가 모두 같은 것과도 일치합니다.
+- 기준값을 다시 재도 epoch당 약 21분으로 재현됩니다.
+- **GPU 메모리는 40GB 중 약 7GB(예약 포함 14GB)만 쓰고 있습니다.** 배치를 키울 여유가 큽니다.
+
+### 원인 분석: 실제 배치 크기가 4보다 훨씬 작음
+`BucketedDataLoader`(`bam_torch/utils/sampler.py`)는 배치에 구조를 최대 `nbatch`개까지 넣다가, 간선 수 합이 `max_edges_per_batch` 이상이 되면 거기서 멈춥니다.
+
+학습 데이터를 직접 확인한 결과 (`natoms.py`):
+- 구조당 원자 수 54~72개 (중앙값 62)
+- cutoff 7 Å 기준 구조당 간선 수 6,112~9,658개 (중앙값 7,741개, 200개 표본)
+
+그래서 `max_edges_per_batch: 15000`이면 구조 2개만 넣어도 대부분 15,000을 넘습니다. **실제 배치는 대부분 구조 1개**이고, `nbatch: 4`에는 거의 도달하지 않습니다. GPU 사용률이 낮은 주된 원인으로 보입니다.
+
+참고: `bucket_reference`는 코드에서 `'edges'`로 고정되어 있어 설정값이 쓰이지 않습니다. `log_interval`은 epoch 단위로 로그와 validation을 건너뛰는 옵션이라 1 epoch 테스트로는 측정할 수 없습니다.
