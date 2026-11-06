@@ -1,0 +1,38 @@
+# 모델/학습 결과 (대용량)
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.traj
+*.db
+*.npz
+*.h5
+
+# Slurm / 로그
+slurm-*.out
+*.err
+*.log
+
+# VASP 대용량 출력
+WAVECAR
+CHGCAR
+CHG
+PROCAR
+LOCPOT
+ELFCAR
+vasprun.xml
+OUTCAR
+EIGENVAL
+DOSCAR
+XDATCAR
+
+# 비밀정보
+.env
+*.key
+*secret*
+
+# Python / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
