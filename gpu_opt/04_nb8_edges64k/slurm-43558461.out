@@ -1,0 +1,74 @@
+name, memory.total [MiB]
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+NVIDIA H100 80GB HBM3, 81559 MiB
+15:42:18 cuequivariance / cuequivariance_torch not available. Cuequivariance acceleration will be disabled.
+15:42:18 [env] pid=1648012 python=/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/bin/python trainer=/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/mp_trainer.py
+15:42:18 Start time: 11/12/2026 15:42:18
+15:42:21 
+15:42:21 device:
+15:42:21 [33m -- cuda
+15:42:21  -- number of gpu  1[0m
+15:42:21 
+15:42:21 equiv. lib.:
+15:42:21 [33m -- OpenEquivariance[0m
+15:42:21 
+15:42:21 interaction block:
+15:42:21 [33m -- fast[0m
+15:42:21 
+15:42:21 [32mrestarting training from the /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/04_nb8_edges64k/model_ft.pkl[0m
+15:42:21  -- restarting from the step where the loss was {'epoch': 118, 'train': tensor(0.0125, device='cuda:0'), 'valid': tensor(0.0003, device='cuda:0')}
+15:42:21 
+15:42:21 number of parameters:
+15:42:21 [33m -- model (race)  6468994[0m
+15:42:21 
+15:42:30 [mem] periodic 15:42:30 max_alloc=2.11GiB max_reserved=2.15GiB
+15:42:38 [mem] final 15:42:38 max_alloc=28.25GiB max_reserved=38.77GiB
+15:42:38 Traceback (most recent call last):
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/tools/mem_wrap.py", line 25, in <module>
+15:42:38     runpy.run_path(script, run_name="__main__")
+15:42:38   File "<frozen runpy>", line 291, in run_path
+15:42:38   File "<frozen runpy>", line 98, in _run_module_code
+15:42:38   File "<frozen runpy>", line 88, in _run_code
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/examples/bam-mp-dens/main_gpu.py", line 70, in <module>
+15:42:38     run(rank=0, world_size=1, json_data=json_data)
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/examples/bam-mp-dens/main_gpu.py", line 47, in run
+15:42:38     trainer.train()
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/dens_trainer.py", line 293, in train
+15:42:38     return super().train()
+15:42:38            ^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/base_trainer.py", line 82, in train
+15:42:38     self.initial_test()
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/base_trainer.py", line 157, in initial_test
+15:42:38     epoch_loss_test = self.train_one_epoch(mode='test')
+15:42:38                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/dens_trainer.py", line 344, in train_one_epoch
+15:42:38     return self._validate_shards(valid_files)
+15:42:38            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/training/dens_trainer.py", line 588, in _validate_shards
+15:42:38     preds = self.model(data, backprop=False)
+15:42:38             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+15:42:38     return self._call_impl(*args, **kwargs)
+15:42:38            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+15:42:38     return forward_call(*args, **kwargs)
+15:42:38            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/model/models.py", line 691, in forward
+15:42:38     forces, virials, stress, hessian = get_outputs(
+15:42:38                                        ^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/utils/output_utils.py", line 215, in get_outputs
+15:42:38     forces, virials, stress = compute_forces_stress(
+15:42:38                               ^^^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/BAM-torch_DeNS/bam_torch/utils/output_utils.py", line 76, in compute_forces_stress
+15:42:38     grad, cellgrad = torch.autograd.grad(
+15:42:38                      ^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/lib/python3.11/site-packages/torch/autograd/__init__.py", line 532, in grad
+15:42:38     result = _engine_run_backward(
+15:42:38              ^^^^^^^^^^^^^^^^^^^^^
+15:42:38   File "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/env/lib/python3.11/site-packages/torch/autograd/graph.py", line 869, in _engine_run_backward
+15:42:38     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+15:42:38            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15:42:38 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 712.00 MiB. GPU 0 has a total capacity of 39.50 GiB of which 420.12 MiB is free. Process 1256211 has 400.00 MiB memory in use. Including non-PyTorch memory, this process has 39.06 GiB memory in use. Of the allocated memory 27.72 GiB is allocated by PyTorch, and 11.05 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+WALL_SEC 88

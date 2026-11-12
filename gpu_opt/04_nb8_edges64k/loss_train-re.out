@@ -1,0 +1,131 @@
+[xyz cache] preprocessed 1427 graphs from /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/val.traj (dropped 0 empty)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* NUMBER OF PARAMETERS: 
+ - MODEL(TOTAL)   6468994
+ --- HIDDEN.      128x0e + 128x1o + 128x2e + 128x3o
+ --- FEATS. DIM.  128
+ --- RADI. BASIS. 12
+
+* SEED NUMBER:
+ - DATA_SEED      1300
+ - INIT_SEED      1301
+
+* DATA INFO:
+ - N(TRAIN)       13654
+ - N(VALID)       1427
+ - BATCH          8
+ - CUTOFF         7.0
+ - AVG. NEIGH.    92
+
+* ELAPSED TIME:
+ - 0 DAYS, 0 HOURS, 0 MINUTES, and 41 SECONDS
+ -- DAYS          0.000474537037 
+ -- HOURS         0.0113888889   
+ -- MINUTES       0.683333333    
+ -- SECONDS       41             
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+{'NN': {'data_seed': 1300,
+        'ema': True,
+        'ema_decay': 0.99,
+        'enr_lambda': 1.0,
+        'fname_pkl': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/04_nb8_edges64k/model_ft.pkl',
+        'frc_lambda': 1.0,
+        'init_seed': 1301,
+        'l2_lambda': 0.0,
+        'learning_rate': 0.0001,
+        'loss_config': {'energy_loss': 'huber',
+                        'force_loss': 'huber',
+                        'huber_delta': 0.25,
+                        'huber_delta_energy': 0.05,
+                        'huber_delta_force': 0.25,
+                        'huber_delta_stress': 0.05,
+                        'stress_loss': 'huber'},
+        'nepoch': 1,
+        'nsave': 1,
+        'optimizer': 'Adam',
+        'restart': True,
+        'str_lambda': 1.0,
+        'weight_decay': 0.0},
+ 'active_fn': 'identity',
+ 'avg_num_neighbors': 92,
+ 'bucket_reference': 'edges',
+ 'cache_parsed_frames': True,
+ 'cueq_config': False,
+ 'cutoff': 7.0,
+ 'dens': {'corrupt_ratio': 0.4,
+          'denoise_lambda': 10.0,
+          'enabled': True,
+          'energy_lambda': 1.0,
+          'probability': 0.4,
+          'sigma_max': 0.1,
+          'sigma_min': 0.01,
+          'sigma_sampling': 'uniform'},
+ 'device': 'gpu',
+ 'element': 'auto',
+ 'enr_avg_per_element': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/04_nb8_edges64k/enr_avg_per_element.txt',
+ 'features_dim': 128,
+ 'fname_traj': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj',
+ 'gpu-parallel': False,
+ 'grad_checkpoint': True,
+ 'hidden_channels': '128x0e + 128x1o + 128x2e + 128x3o',
+ 'interaction_block': 'fast',
+ 'l_separated_layer_norm': False,
+ 'log_config': {'lr': ['lr'],
+                'step': ['date', 'epoch'],
+                'train': ['loss',
+                          'loss_e_h',
+                          'loss_f_h',
+                          'loss_s_h',
+                          'loss_dn_h',
+                          'loss_e',
+                          'loss_f',
+                          'loss_s',
+                          'loss_dn'],
+                'valid': ['loss',
+                          'loss_e_h',
+                          'loss_f_h',
+                          'loss_s_h',
+                          'loss_e',
+                          'loss_f',
+                          'loss_s']},
+ 'log_interval': 1,
+ 'log_length': 'simple',
+ 'max_edges_per_batch': 64000,
+ 'max_ell': 3,
+ 'model': 'race',
+ 'n_buckets': 8,
+ 'nbatch': 8,
+ 'nlayers': 5,
+ 'ntrain': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj',
+ 'num_radial_basis': 12,
+ 'num_species': 89,
+ 'nvalid': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/val.traj',
+ 'oeq_config': True,
+ 'oeq_conv_fusion': True,
+ 'output_channels': '1x0e',
+ 'pbc': True,
+ 'predict': {'evaluate_tag': False,
+             'fname_plog': 'predict.out',
+             'fname_traj': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/test.traj',
+             'loss_config': {'energy_loss': 'mae', 'force_loss': 'mae'},
+             'model': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/04_nb8_edges64k/model_ft.pkl',
+             'ndata': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/test.traj'},
+ 'radial_polynomial_p': 6,
+ 'regress_forces': True,
+ 'scheduler': {'cooldown': 1,
+               'decay_factor': 0.5,
+               'lr_init': 0.0001,
+               'min_lr': 1e-06,
+               'patience': 10,
+               'scheduler': 'ReduceLROnPlateau',
+               'threshold': 0.001},
+ 'skip_species_dim': 4,
+ 'species_embedding_dim': 16,
+ 'train': {'fname_log': 'loss_train-re.out'},
+ 'trainer': 'dens',
+ 'x_feats_per_layer': True,
+ 'x_feats_rms_norm': True,
+ 'x_features_dim': 8}
