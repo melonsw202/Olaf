@@ -1,0 +1,130 @@
+{
+ "device": "gpu",
+ "model": "race",
+ "trainer": "dens",
+ "interaction_block": "fast",
+ "oeq_config": true,
+ "oeq_conv_fusion": true,
+ "cueq_config": false,
+ "grad_checkpoint": true,
+ "gpu-parallel": false,
+ "fname_traj": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj",
+ "ntrain": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj",
+ "nvalid": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/val.traj",
+ "element": "auto",
+ "cutoff": 7.0,
+ "avg_num_neighbors": 92,
+ "num_species": 89,
+ "hidden_channels": "128x0e + 128x1o + 128x2e + 128x3o",
+ "features_dim": 128,
+ "species_embedding_dim": 16,
+ "x_features_dim": 8,
+ "skip_species_dim": 4,
+ "x_feats_per_layer": true,
+ "x_feats_rms_norm": true,
+ "num_radial_basis": 12,
+ "radial_polynomial_p": 6,
+ "nlayers": 5,
+ "max_ell": 3,
+ "output_channels": "1x0e",
+ "active_fn": "identity",
+ "regress_forces": true,
+ "l_separated_layer_norm": false,
+ "pbc": true,
+ "nbatch": 4,
+ "n_buckets": 8,
+ "bucket_reference": "edges",
+ "max_edges_per_batch": 15000,
+ "cache_parsed_frames": true,
+ "NN": {
+  "optimizer": "Adam",
+  "data_seed": 1300,
+  "init_seed": 1301,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0,
+  "nepoch": 3,
+  "nsave": 1,
+  "restart": true,
+  "fname_pkl": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/05_bs1_lr1e-4/model_ft.pkl",
+  "ema": true,
+  "ema_decay": 0.99,
+  "loss_config": {
+   "energy_loss": "huber",
+   "force_loss": "huber",
+   "stress_loss": "huber",
+   "huber_delta": 0.25,
+   "huber_delta_energy": 0.05,
+   "huber_delta_force": 0.25,
+   "huber_delta_stress": 0.05
+  },
+  "enr_lambda": 1.0,
+  "frc_lambda": 1.0,
+  "str_lambda": 1.0,
+  "l2_lambda": 0.0
+ },
+ "scheduler": {
+  "scheduler": "ReduceLROnPlateau",
+  "decay_factor": 0.5,
+  "patience": 10,
+  "threshold": 0.001,
+  "cooldown": 1,
+  "min_lr": 1e-06,
+  "lr_init": 0.0001
+ },
+ "log_length": "simple",
+ "log_interval": 1,
+ "log_config": {
+  "step": [
+   "date",
+   "epoch"
+  ],
+  "train": [
+   "loss",
+   "loss_e_h",
+   "loss_f_h",
+   "loss_s_h",
+   "loss_dn_h",
+   "loss_e",
+   "loss_f",
+   "loss_s",
+   "loss_dn"
+  ],
+  "valid": [
+   "loss",
+   "loss_e_h",
+   "loss_f_h",
+   "loss_s_h",
+   "loss_e",
+   "loss_f",
+   "loss_s"
+  ],
+  "lr": [
+   "lr"
+  ]
+ },
+ "train": {
+  "fname_log": "loss_train.out"
+ },
+ "predict": {
+  "evaluate_tag": false,
+  "loss_config": {
+   "energy_loss": "mae",
+   "force_loss": "mae"
+  },
+  "fname_traj": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/test.traj",
+  "ndata": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/test.traj",
+  "model": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/05_bs1_lr1e-4/model_ft.pkl",
+  "fname_plog": "predict.out"
+ },
+ "dens": {
+  "enabled": true,
+  "probability": 0.4,
+  "sigma_sampling": "uniform",
+  "sigma_min": 0.01,
+  "sigma_max": 0.1,
+  "corrupt_ratio": 0.4,
+  "denoise_lambda": 10.0,
+  "energy_lambda": 1.0
+ },
+ "enr_avg_per_element": "/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/05_bs1_lr1e-4/enr_avg_per_element.txt"
+}

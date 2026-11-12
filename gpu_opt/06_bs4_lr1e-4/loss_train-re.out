@@ -1,0 +1,160 @@
+[xyz cache] preprocessed 1427 graphs from /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/val.traj (dropped 0 empty)
+                               | TRAIN_______________________________________________________________________________________________| VALID_________________________________________________________________________| 
+MM/DD/YYYY HH/MM/SS    EPOCH   | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   LOSS_DN_H  HUBER_E    HUBER_F    HUBER_S    LOSS_DN     | LOSS       LOSS_E_H   LOSS_F_H   LOSS_S_H   HUBER_E    HUBER_F    HUBER_S     | LR   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[xyz cache] preprocessed 13654 graphs from /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj (dropped 0 empty)
+[per-xyz] epoch=1 xyz=1/1 14.61% train: loss=0.062865 loss_e_h=0.002361 loss_f_h=0.001605 loss_s_h=0.000102 loss_dn_h=nan loss_e=0.062865 loss_f=0.036149 loss_s=0.009109 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 29.24% train: loss=0.037060 loss_e_h=0.001260 loss_f_h=0.001406 loss_s_h=0.000071 loss_dn_h=nan loss_e=0.037060 loss_f=0.033350 loss_s=0.007418 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 43.88% train: loss=0.028307 loss_e_h=0.000889 loss_f_h=0.001288 loss_s_h=0.000053 loss_dn_h=nan loss_e=0.028307 loss_f=0.031694 loss_s=0.006197 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 58.52% train: loss=0.024087 loss_e_h=0.000707 loss_f_h=0.001211 loss_s_h=0.000042 loss_dn_h=nan loss_e=0.024087 loss_f=0.030538 loss_s=0.005313 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 73.16% train: loss=0.021410 loss_e_h=0.000595 loss_f_h=0.001146 loss_s_h=0.000035 loss_dn_h=nan loss_e=0.021410 loss_f=0.029607 loss_s=0.004640 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 87.79% train: loss=0.019587 loss_e_h=0.000521 loss_f_h=0.001107 loss_s_h=0.000030 loss_dn_h=nan loss_e=0.019587 loss_f=0.028939 loss_s=0.004128 loss_dn=nan
+[per-xyz] epoch=1 xyz=1/1 100.00% train: loss=0.018400 loss_e_h=0.000470 loss_f_h=0.001060 loss_s_h=0.000026 loss_dn_h=nan loss_e=0.018400 loss_f=0.028299 loss_s=0.003744 loss_dn=nan
+11/12/2026 16:39:51    119     | 0.018127   0.00045893 0.0010578  2.5128e-05 nan        0.018127   0.028215   0.0036596  nan         | 0.00024402 0.00024402 0.00088603 5.3484e-06 0.016767   0.025892   0.0019521   | 0.0001
+[dens] rattled 13654 graphs from /proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj (sigma ~ uniform(0.01, 0.1), corrupt_ratio=0.4)
+[per-xyz] epoch=2 xyz=1/1 14.61% train: loss=0.010495 loss_e_h=0.000146 loss_f_h=0.001453 loss_s_h=nan loss_dn_h=0.000090 loss_e=0.010495 loss_f=0.035557 loss_s=nan loss_dn=0.009233
+[per-xyz] epoch=2 xyz=1/1 29.24% train: loss=0.010601 loss_e_h=0.000146 loss_f_h=0.001314 loss_s_h=nan loss_dn_h=0.000085 loss_e=0.010601 loss_f=0.033852 loss_s=nan loss_dn=0.008955
+[per-xyz] epoch=2 xyz=1/1 43.88% train: loss=0.010611 loss_e_h=0.000147 loss_f_h=0.001240 loss_s_h=nan loss_dn_h=0.000082 loss_e=0.010611 loss_f=0.032880 loss_s=nan loss_dn=0.008739
+[per-xyz] epoch=2 xyz=1/1 58.52% train: loss=0.010711 loss_e_h=0.000149 loss_f_h=0.001241 loss_s_h=nan loss_dn_h=0.000080 loss_e=0.010711 loss_f=0.032596 loss_s=nan loss_dn=0.008599
+[per-xyz] epoch=2 xyz=1/1 73.16% train: loss=0.010780 loss_e_h=0.000150 loss_f_h=0.001201 loss_s_h=nan loss_dn_h=0.000077 loss_e=0.010780 loss_f=0.032044 loss_s=nan loss_dn=0.008435
+[per-xyz] epoch=2 xyz=1/1 87.79% train: loss=0.010822 loss_e_h=0.000152 loss_f_h=0.001167 loss_s_h=nan loss_dn_h=0.000075 loss_e=0.010822 loss_f=0.031617 loss_s=nan loss_dn=0.008317
+[per-xyz] epoch=2 xyz=1/1 100.00% train: loss=0.010963 loss_e_h=0.000154 loss_f_h=0.001154 loss_s_h=nan loss_dn_h=0.000074 loss_e=0.010963 loss_f=0.031381 loss_s=nan loss_dn=0.008241
+11/12/2026 16:51:34    120     | 0.010971   0.00015422 0.0011452  nan        7.3983e-05 0.010971   0.031271   nan        0.0082152   | 9.1464e-05 9.1464e-05 0.0011305  7.3942e-06 0.0095677  0.029876   0.0021589   | 0.0001
+[per-xyz] epoch=3 xyz=1/1 14.61% train: loss=0.011401 loss_e_h=0.000166 loss_f_h=0.000836 loss_s_h=0.000006 loss_dn_h=nan loss_e=0.011401 loss_f=0.024823 loss_s=0.001892 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 29.24% train: loss=0.011315 loss_e_h=0.000165 loss_f_h=0.000791 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.011315 loss_f=0.024084 loss_s=0.001737 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 43.88% train: loss=0.011278 loss_e_h=0.000165 loss_f_h=0.000799 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.011278 loss_f=0.023988 loss_s=0.001680 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 58.52% train: loss=0.011039 loss_e_h=0.000161 loss_f_h=0.000761 loss_s_h=0.000005 loss_dn_h=nan loss_e=0.011039 loss_f=0.023545 loss_s=0.001591 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 73.16% train: loss=0.010829 loss_e_h=0.000157 loss_f_h=0.000761 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.010829 loss_f=0.023472 loss_s=0.001522 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 87.79% train: loss=0.010576 loss_e_h=0.000151 loss_f_h=0.000756 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.010576 loss_f=0.023362 loss_s=0.001476 loss_dn=nan
+[per-xyz] epoch=3 xyz=1/1 100.00% train: loss=0.010589 loss_e_h=0.000152 loss_f_h=0.000752 loss_s_h=0.000004 loss_dn_h=nan loss_e=0.010589 loss_f=0.023232 loss_s=0.001451 loss_dn=nan
+11/12/2026 17:03:03    121     | 0.010617   0.00015209 0.00074543 3.9476e-06 nan        0.010617   0.02316    0.0014436  nan         | 0.00011271 0.00011271 0.00073484 3.6236e-06 0.0094821  0.023121   0.0013222   | 0.0001
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* NUMBER OF PARAMETERS: 
+ - MODEL(TOTAL)   6468994
+ --- HIDDEN.      128x0e + 128x1o + 128x2e + 128x3o
+ --- FEATS. DIM.  128
+ --- RADI. BASIS. 12
+
+* SEED NUMBER:
+ - DATA_SEED      1300
+ - INIT_SEED      1301
+
+* DATA INFO:
+ - N(TRAIN)       13654
+ - N(VALID)       1427
+ - BATCH          4
+ - CUTOFF         7.0
+ - AVG. NEIGH.    92
+
+* ELAPSED TIME:
+ - 0 DAYS, 0 HOURS, 36 MINUTES, and 14 SECONDS
+ -- DAYS          0.025162037    
+ -- HOURS         0.603888889    
+ -- MINUTES       36.2333333     
+ -- SECONDS       2174           
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+{'NN': {'data_seed': 1300,
+        'ema': True,
+        'ema_decay': 0.99,
+        'enr_lambda': 1.0,
+        'fname_pkl': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/06_bs4_lr1e-4/model_ft.pkl',
+        'frc_lambda': 1.0,
+        'init_seed': 1301,
+        'l2_lambda': 0.0,
+        'learning_rate': 0.0001,
+        'loss_config': {'energy_loss': 'huber',
+                        'force_loss': 'huber',
+                        'huber_delta': 0.25,
+                        'huber_delta_energy': 0.05,
+                        'huber_delta_force': 0.25,
+                        'huber_delta_stress': 0.05,
+                        'stress_loss': 'huber'},
+        'nepoch': 3,
+        'nsave': 1,
+        'optimizer': 'Adam',
+        'restart': True,
+        'str_lambda': 1.0,
+        'weight_decay': 0.0},
+ 'active_fn': 'identity',
+ 'avg_num_neighbors': 92,
+ 'bucket_reference': 'edges',
+ 'cache_parsed_frames': True,
+ 'cueq_config': False,
+ 'cutoff': 7.0,
+ 'dens': {'corrupt_ratio': 0.4,
+          'denoise_lambda': 10.0,
+          'enabled': True,
+          'energy_lambda': 1.0,
+          'probability': 0.4,
+          'sigma_max': 0.1,
+          'sigma_min': 0.01,
+          'sigma_sampling': 'uniform'},
+ 'device': 'gpu',
+ 'element': 'auto',
+ 'enr_avg_per_element': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/06_bs4_lr1e-4/enr_avg_per_element.txt',
+ 'features_dim': 128,
+ 'fname_traj': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj',
+ 'gpu-parallel': False,
+ 'grad_checkpoint': True,
+ 'hidden_channels': '128x0e + 128x1o + 128x2e + 128x3o',
+ 'interaction_block': 'fast',
+ 'l_separated_layer_norm': False,
+ 'log_config': {'lr': ['lr'],
+                'step': ['date', 'epoch'],
+                'train': ['loss',
+                          'loss_e_h',
+                          'loss_f_h',
+                          'loss_s_h',
+                          'loss_dn_h',
+                          'loss_e',
+                          'loss_f',
+                          'loss_s',
+                          'loss_dn'],
+                'valid': ['loss',
+                          'loss_e_h',
+                          'loss_f_h',
+                          'loss_s_h',
+                          'loss_e',
+                          'loss_f',
+                          'loss_s']},
+ 'log_interval': 1,
+ 'log_length': 'simple',
+ 'max_edges_per_batch': 32000,
+ 'max_ell': 3,
+ 'model': 'race',
+ 'n_buckets': 8,
+ 'nbatch': 4,
+ 'nlayers': 5,
+ 'ntrain': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/train.traj',
+ 'num_radial_basis': 12,
+ 'num_species': 89,
+ 'nvalid': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/val.traj',
+ 'oeq_config': True,
+ 'oeq_conv_fusion': True,
+ 'output_channels': '1x0e',
+ 'pbc': True,
+ 'predict': {'evaluate_tag': False,
+             'fname_plog': 'predict.out',
+             'fname_traj': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/test.traj',
+             'loss_config': {'energy_loss': 'mae', 'force_loss': 'mae'},
+             'model': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/calc_opt/06_bs4_lr1e-4/model_ft.pkl',
+             'ndata': '/proj/home/ibs/tdqh/hgpark/calc/battery/Na_cathode/Ni_doped_NMO/lsw/mlp_data_set/test.traj'},
+ 'radial_polynomial_p': 6,
+ 'regress_forces': True,
+ 'scheduler': {'cooldown': 1,
+               'decay_factor': 0.5,
+               'lr_init': 0.0001,
+               'min_lr': 1e-06,
+               'patience': 10,
+               'scheduler': 'ReduceLROnPlateau',
+               'threshold': 0.001},
+ 'skip_species_dim': 4,
+ 'species_embedding_dim': 16,
+ 'train': {'fname_log': 'loss_train-re.out'},
+ 'trainer': 'dens',
+ 'x_feats_per_layer': True,
+ 'x_feats_rms_norm': True,
+ 'x_features_dim': 8}
