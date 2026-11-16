@@ -170,7 +170,7 @@ validation MAE (에너지 meV/atom / 힘 eV/Å / 응력):
 - CPU 수(4/8/16)는 속도에 영향이 없습니다. 병목은 GPU입니다. 원래대로 `-c 8`을 유지합니다.
 
 ### 중요: 모델 저장과 lr 감소가 에너지 오차만 봅니다
-`dens_trainer.py`는 valid `LOSS`가 이전 최솟값보다 낮을 때만 `fname_pkl`에 모델을 저장합니다. `base_trainer.py`의 `ReduceLROnPlateau`도 같은 valid `LOSS`를 씁니다. 그런데 valid `LOSS`는 에너지 항(`LOSS_E_H`)과 같습니다.
+`input.json`에 `valid_interval`이 없어서 학습은 `base_trainer.py`의 `train()`으로 진행됩니다. 여기서 checkpoint는 valid `LOSS`가 이전 최솟값보다 낮을 때만 갱신되어 `fname_pkl`에 저장되고, `ReduceLROnPlateau`도 같은 valid `LOSS`를 씁니다. 그런데 valid `LOSS`는 에너지 항(`LOSS_E_H`)과 같습니다.
 
 실제로 09와 10 모두 `model_ft.pkl`이 **epoch 120에서 마지막으로 저장**되었습니다(파일 수정 시각 18:48 / 19:07). epoch 121~128에서 힘 MAE가 0.027 → 0.017로 좋아졌지만 그 모델은 저장되지 않았습니다. 또 valid `LOSS`가 epoch 120 이후 나아지지 않아, 10 epoch(patience)가 더 지나면 lr이 절반으로 줄어듭니다.
 
@@ -190,3 +190,9 @@ validation MAE (에너지 meV/atom / 힘 eV/Å / 응력):
 
 - `recommended/input.json`, `recommended/run.sh`는 `calc_run/` 폴더에서 돌리는 예시입니다 (원본 `calc/` 덮어쓰기 방지). 실제 폴더 이름에 맞게 경로를 바꿔 쓰면 됩니다.
 - `restart: true`이면 `input.json`의 lr이 적용되지 않으므로, 복사한 모델에 `recommended/set_ckpt_lr.py`로 lr을 먼저 넣어야 합니다.
+
+## 참고: 원본 `calc/model_ft.pkl`은 사전학습 모델과 같은 가중치 (2026-11-16 확인)
+- `params`와 `ema_state`가 `mlp_data_set/BAM-MP-DeNS/BAM-MP-DeNS-model.pkl`과 완전히 같습니다 (최대 차이 0).
+- optimizer `state`가 비어 있고 scheduler `last_epoch`이 0입니다. 파일 크기가 절반(78MB)인 것도 Adam 기록이 없기 때문입니다.
+- `loss.epoch` 118, `valid` 0.0003은 사전학습 때 값입니다.
+- 따라서 위의 모든 테스트는 사전학습 모델에서 시작한 파인튜닝이고, 표의 "epoch 119~"는 파인튜닝 1~ 번째 epoch입니다.
